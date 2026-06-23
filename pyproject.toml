@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "repolens"
+version = "0.1.0"
+description = "X-ray vision for any Git repository — hotspots, knowledge risk, temporal coupling and activity in one self-contained, offline HTML report."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Akhil" }]
+keywords = ["git", "code-analysis", "hotspots", "bus-factor", "visualization", "developer-tools"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+  "Topic :: Software Development :: Quality Assurance",
+  "Environment :: Console",
+]
+dependencies = []   # zero runtime dependencies — uses only the standard library
+
+[project.optional-dependencies]
+dev = ["pytest>=7"]
+
+[project.scripts]
+repolens = "repolens.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/akhil/repolens"
+Issues = "https://github.com/akhil/repolens/issues"
+
+[tool.setuptools]
+packages = ["repolens"]
